@@ -1,0 +1,383 @@
+/* base start */
+p {
+    color: #333;
+    line-height: 1.7em;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.fixed-width {
+    width: 1200px;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .fixed-width {
+        width: 100%;
+    }
+}
+
+.col-1 {
+    width: calc(100% / 12 * 1);
+}
+
+.col-2 {
+    width: calc(100% / 12 * 2);
+}
+
+.col-3 {
+    width: calc(100% / 12 * 3);
+}
+
+.col-4 {
+    width: calc(100% / 12 * 4);
+}
+
+.col-5 {
+    width: calc(100% / 12 * 5);
+}
+
+.col-6 {
+    width: calc(100% / 12 * 6);
+}
+
+.col-7 {
+    width: calc(100% / 12 * 7);
+}
+
+.col-8 {
+    width: calc(100% / 12 * 8);
+}
+
+.col-9 {
+    width: calc(100% / 12 * 9);
+}
+
+.col-10 {
+    width: calc(100% / 12 * 10);
+}
+
+.col-11 {
+    width: calc(100% / 12 * 11);
+}
+
+.col-12 {
+    width: calc(100% / 12 * 12);
+}
+
+[class*="col"] {
+    float: left;
+    padding: 10px;
+}
+
+/* base end */
+
+/* nav start */
+nav {
+    background-color: #e4e1e1;
+    height: 90px;
+    line-height: 90px;
+}
+
+nav .logo {
+    float: left;
+    padding-left: 20px;
+}
+
+nav .menu {
+    float: right;
+
+}
+
+nav li {
+    letter-spacing: 1px;
+    float: left;
+    padding: 0 10px;
+}
+
+nav a {
+    color: var(--dark);
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+@media screen and (max-width: 569px) {
+    nav .logo {
+        float: none;
+        border-bottom: 1px solid #fff;
+    }
+
+    nav .menu {
+        float: none;
+        width: 100%;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 2.3s;
+        position: absolute;
+        background-color: #e4e1e1;
+        z-index: 99;
+    }
+
+    nav li {
+        float: none;
+        border-bottom: 1px solid #fff;
+    }
+}
+
+@media screen and (max-width: 569px) {
+    .showMenu {
+        display: block;
+        width: 80px;
+        height: 90px;
+        position: relative;
+        float: right;
+    }
+
+    .showMenu-dash {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        transition: all .6s;
+    }
+
+    .showMenu-dash::before {
+        content: "";
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        bottom: 10px;
+        transition: all .6s;
+    }
+
+    .showMenu-dash::after {
+        content: "";
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        top: 10px;
+        transition: all .6s;
+    }
+
+    .menu-show .menu {
+        max-height: 500px;
+    }
+}
+
+/* nav end */
+
+/*shift start*/
+#shift {
+    padding-top: 200px;
+    padding-bottom: 150px;
+}
+
+#shift .title {
+    float: right;
+    padding-left: 520px;
+    padding-bottom: 150px;
+}
+
+#shift h3 {
+    font-size: 3em;
+    padding-bottom: 15px;
+}
+
+#shift .shifts-date {
+    color: var(--primaryColor);
+}
+
+@media screen and (max-width: 768px) {
+    #shift {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    #shift .title {
+        float: none;
+        padding-left: 30px;
+        padding-bottom: 100px;
+    }
+
+}
+
+@media screen and (max-width: 569px) {
+    #shift {
+        padding-top: 50px;
+    }
+
+    #shift .title {
+        padding-bottom: 30px;
+    }
+
+    #shift h3 {
+        font-size: 1.7em;
+    }
+
+    #shift .col-4 {
+        width: 100%;
+    }
+}
+
+/*shift end*/
+
+/*introduce start*/
+#introduce {
+    background-color: rgb(240, 237, 237);
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+#introduce .title {
+    padding-bottom: 100px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#introduce img {
+    margin-left: 150px;
+    width: 20vw;
+    height: 40vh;
+}
+
+#introduce .info {
+    padding-bottom: 5px;
+}
+
+#introduce h3 {
+    padding-bottom: 20px;
+    font-size: 1.5em;
+}
+
+#introduce p {
+    letter-spacing: 1px;
+    font-size: 1em;
+    padding-bottom: 20px;
+}
+
+#introduce .btn {
+    padding-bottom: 20px;
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: rgb(235, 233, 233);
+    color: var(--primaryColor);
+    border-style: solid;
+    border-color: var(--primaryColor);
+    text-decoration: none;
+    transition: all .3s;
+}
+
+#introduce .contact {
+    padding-bottom: 20px;
+}
+
+#introduce .community {
+    padding-bottom: 20px;
+}
+
+#introduce a {
+    color: var(--primaryColor);
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+@media screen and (max-width: 768px) {
+    #introduce img {
+        margin-left: 100px;
+        width: 30vw;
+        height: 35vh;
+    }
+}
+
+@media screen and (max-width: 569px) {
+    #introduce .col-6 {
+        float: none;
+        width: 100%;
+    }
+
+    #introduce .title {
+        padding-bottom: 10px;
+    }
+
+    #introduce img {
+        margin-left: 10px;
+        width: 80vw;
+        height: 50vh;
+    }
+
+    #introduce .info {
+
+        text-align: center;
+    }
+
+    #introduce .name {
+        text-align: center;
+    }
+}
+
+/*introduce end*/
+
+/*started*/
+#started {
+    background-color: var(--primaryColor);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+#started h3 {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    ;
+    padding-bottom: 20px;
+}
+
+#started p {
+    padding-bottom: 30px;
+}
+
+#started .btn {
+    display: inline-block;
+    padding: 15px 50px;
+    background-color: var(--primaryColor);
+    border-style: solid;
+    border-color: #333;
+    color: #333;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+/*copyright*/
+#copyright {
+    background: #f0eded;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+#copyright .title {
+    margin-bottom: 10px;
+}
+
+#copyright .copyrights-info {
+    margin-bottom: 20px;
+}
+
+#copyright .copyrights-date {
+    color: var(--primaryColor)
+}
+
+#copyright a {
+    padding: 10px 10px;
+    text-decoration: none;
+    color: var(--primaryColor)
+}
